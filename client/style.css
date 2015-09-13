@@ -8,11 +8,23 @@ h1{
 	color: white;
 	font-weight: bold;
 	font-size: 50px;
-	margin-top: 50px
+	margin-top: 150px;
 }
 
 .container{
 	text-align: center;
+}
+
+.character{
+	display: inline-block;
+	padding: 10px;
+	font-size: 35px;
+	color: #b3c2bf;
+	background-color: #e9ece5;
+	margin: 8px;
+	width: 40px;
+	height: 40px;
+	border-radius: 10px;
 }
 
 .footer{

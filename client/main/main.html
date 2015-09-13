@@ -1,7 +1,7 @@
 <h1>Scramble</h1>
 <div class="container">
-	<div ng-repeat="character in characters track by $index">
-		<span>{{ character }}</span>
+	<div>
+		<div class="character" ng-repeat="character in characters track by $index">{{ character }}</div>
 	</div>
 </div>
 <div class="footer">

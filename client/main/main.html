@@ -1,6 +1,6 @@
 <h1>Scramble</h1>
 <div class="container" keypress-events keydown-events>
-	<div class="character unscrambled" ng-repeat="character in unscrambled track by $index">{{ character }}</div>
+	<div class="character unscrambled" ng-class="{'matched': matched, 'noMatch': noMatch}" ng-repeat="character in unscrambled track by $index">{{ character }}</div>
 	<div class="character scrambled" ng-repeat="character in scrambled track by $index">{{ character }}</div>
 </div>
 <div class="footer">

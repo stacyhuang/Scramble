@@ -39,11 +39,11 @@ h1{
 	color: #b3c2bf;
 }
 
-.notSelected{
+.scrambled{
 	background-color: #e9ece5;
 }
 
-.selected{
+.unscrambled{
 	background-color: #fff;
 }
 

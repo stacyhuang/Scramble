@@ -1,5 +1,8 @@
 <h1>Scramble</h1>
 <div class="container">
+	<div ng-repeat="character in characters track by $index">
+		<span>{{ character }}</span>
+	</div>
 </div>
 <div class="footer">
 	<h2>Made with <i class="fa fa-heart"></i> by Stacy</h2>

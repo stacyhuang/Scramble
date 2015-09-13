@@ -11,11 +11,6 @@ h1{
 	margin: 165px 0 10px 0;
 }
 
-
-.container{
-	text-align: center;
-}
-
 .character{
 	display: inline-block;
 	padding: 10px;
@@ -28,9 +23,8 @@ h1{
 	font-weight: bolder;
 }
 
-.footer h2{
-	margin: 10px;
-	font-size: 18px;
+.container{
+	text-align: center;
 }
 
 .footer{
@@ -41,6 +35,11 @@ h1{
 	color: #b3c2bf;
 }
 
+.footer h2{
+	margin: 10px;
+	font-size: 18px;
+}
+
 .matched{
 	color: white;
 	background-color: #6ed3cf !important;
@@ -49,10 +48,6 @@ h1{
 .noMatch{
 	color: white;
 	background-color: #e05038 !important;
-}
-
-.unscrambled{
-	background-color: #fff;
 }
 
 #score{
@@ -70,11 +65,7 @@ h1{
 	background-color: #e9ece5;
 }
 
-span{
-	margin: 0 10px;
-}
-
-.social-buttons a {
+.social-buttons a{
 	display: inline-block;
   width: 35px;
   height: 35px;
@@ -87,6 +78,14 @@ span{
 
 .social-buttons a:hover,
 .social-buttons a:focus,
-.social-buttons a:active {
+.social-buttons a:active{
   background-color: #e9ece5;
+}
+
+span{
+	margin: 0 10px;
+}
+
+.unscrambled{
+	background-color: #fff;
 }

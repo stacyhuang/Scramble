@@ -74,7 +74,6 @@
 						$scope.word = word.word;
 						$scope.unscrambled = '';
 						$scope.scrambled = '';
-						console.log("original word: " + $scope.word);
 						$scope.scramble($scope.word);
 					});
 			};
@@ -90,7 +89,6 @@
 				}
 				$scope.scrambledWord = arr.join('');
 				$scope.scrambled = $scope.scrambledWord;
-
 			}
 
 			$scope.getWord();

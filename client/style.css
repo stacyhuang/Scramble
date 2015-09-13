@@ -11,9 +11,6 @@ h1{
 	margin-top: 150px;
 }
 
-.footer h2{
-	margin: 10px;
-}
 
 .container{
 	text-align: center;
@@ -24,11 +21,14 @@ h1{
 	padding: 10px;
 	font-size: 35px;
 	color: #b3c2bf;
-	background-color: #e9ece5;
 	margin: 8px;
 	width: 40px;
 	height: 40px;
 	border-radius: 10px;
+}
+
+.footer h2{
+	margin: 10px;
 }
 
 .footer{
@@ -37,6 +37,14 @@ h1{
 	bottom: 30px;
 	text-align: center;
 	color: #b3c2bf;
+}
+
+.notSelected{
+	background-color: #e9ece5;
+}
+
+.selected{
+	background-color: #fff;
 }
 
 .social-buttons a {

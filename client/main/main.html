@@ -1,9 +1,7 @@
 <h1>Scramble</h1>
 <div class="container" keypress-events keydown-events>
-	<div>
-		<div class="character" ng-repeat="character in characters track by $index">{{ character }}</div>
-		{{ key }}
-	</div>
+	<div class="character selected" ng-repeat="selectedChar in selectedChars track by $index">{{ selectedChar }}</div>
+	<div class="character notSelected" ng-repeat="remainingChar in remainingChars track by $index">{{ remainingChar }}</div>
 </div>
 <div class="footer">
 	<h2>Made with <i class="fa fa-heart"></i> by Stacy</h2>

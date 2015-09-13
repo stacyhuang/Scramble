@@ -16,8 +16,8 @@
 			$scope.noMatch = false;
 
 			// On keypress, check if pressed character matches any character in the scrambled string
-			// If so, remove character from scrambled string and add it to the unscrambled string
-			// If unscrambled string matches the original word, call getWord() to get a new word
+			// If so, remove character from scrambled string and add it to the unscrambled string.
+			// If unscrambled string matches the original word or is an anagram, call getWord() to get a new word
 	    $rootScope.$on('keypress', function (evt, obj, key) {
 	    	$scope.$apply(function () {
 		    	var index = $scope.scrambled.indexOf(key);
@@ -27,19 +27,22 @@
 		    		$scope.indexStack.push(index);
 		    	}
 		    	if($scope.unscrambled.length === $scope.word.length){
-		    		if($scope.unscrambled === $scope.word){
-		    			$scope.matched = true;
-		    			$timeout(function(){
-		    				$scope.getWord()
-		    			}, 500);
-		    		}else{
-		    			$scope.noMatch = !$scope.noMatch;
-		    			$timeout(function(){
-			    			$scope.unscrambled = '';
-			    			$scope.scrambled = $scope.scrambledWord;
-			    			$scope.noMatch = !$scope.noMatch;
-		    			}, 500);
-		    		}
+		    		MainFactory.checkWord($scope.unscrambled)
+		    			.then(function(result){
+		    				if(result.totalResults > 0 || $scope.unscrambled === $scope.word){
+		    					$scope.matched = true;
+		    					$timeout(function(){
+		    						$scope.getWord()
+		    					}, 500);
+		    				}else{
+				    			$scope.noMatch = !$scope.noMatch;
+				    			$timeout(function(){
+					    			$scope.unscrambled = '';
+					    			$scope.scrambled = $scope.scrambledWord;
+					    			$scope.noMatch = !$scope.noMatch;
+				    			}, 500);
+				    		}
+		    			});
 		    	}
         });
 	    });

@@ -18,32 +18,21 @@
 				})
 			};
 
-			// Check if two strings are anagrams of each other and returns a boolean
-			var compareAnagram = function(str1, str2){
-				var storage = {};
-				for(var i = 0; i < str1.length; i++){
-					if(!storage[str1[i]]){
-						storage[str1[i]] = 1;
-					}else{
-						storage[str1[i]] = storage[str1[i]] + 1;
-					}
-				}
-				for(var j = 0; j < str2.length; j++){
-					if(!storage[str2[j]]){
-						return false;
-					}else{
-						storage[str2[j]] = storage[str2[j]] - 1;
-						if(storage[str2[j]] === 0){
-							delete storage[str2[j]];
-						}
-					}
-				}
-				return Object.keys(storage).length === 0;
+			// Searh a word using the Wordnik API which returns, among others, the total search result count
+			// Invalid word will return 'totalResults' of 0
+			var checkWord = function(word){
+				return $http({
+					method: 'GET',
+					url: 'http://api.wordnik.com:80/v4/words.json/search/' + word + '?caseSensitive=true&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5'
+				})
+				.then(function(res){
+					return res.data;
+				})
 			};
 
 			return {
 				getWord: getWord,
-				compareAnagram: compareAnagram
+				checkWord: checkWord
 			};
 		}
 })();

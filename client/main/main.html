@@ -1,7 +1,8 @@
 <h1>Scramble</h1>
-<div class="container">
+<div class="container" keypress-events keydown-events>
 	<div>
 		<div class="character" ng-repeat="character in characters track by $index">{{ character }}</div>
+		{{ key }}
 	</div>
 </div>
 <div class="footer">

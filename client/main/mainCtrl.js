@@ -74,6 +74,7 @@
 						$scope.word = word.word;
 						$scope.unscrambled = '';
 						$scope.scrambled = '';
+						$scope.indexStack = [];
 						$scope.scramble($scope.word);
 					});
 			};

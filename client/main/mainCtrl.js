@@ -14,6 +14,7 @@
 
 			// On keypress, check if pressed character matches any character in the scrambled string
 			// If so, remove character from scrambled string and add it to the unscrambled string
+			// If unscrambled string matches the original word, call getWord() to get a new word
 	    $rootScope.$on('keypress', function (evt, obj, key) {
 	    	$scope.$apply(function () {
 		    	var index = $scope.scrambled.indexOf(key);
@@ -21,12 +22,15 @@
 		    		$scope.unscrambled += $scope.scrambled[index];
 		    		$scope.scrambled = $scope.scrambled.slice(0, index) + $scope.scrambled.slice(index + 1);
 		    		$scope.indexStack.push(index);
+		    		if($scope.unscrambled === $scope.word){
+		    			$scope.getWord();
+		    		}
 		    	}
         });
 	    });
 
-	    // On keydown, remove last ad character from the unscrambled string,
-	    // and add it back to previous index in the scrambled string
+	    // On keydown, remove previous character from the unscrambled string,
+	    // and add it back to the scrambled string at its previous index
 	    $rootScope.$on('keydown', function (evt, obj, key) {
         $scope.$apply(function () {
         	var prevIndex = $scope.indexStack.pop();
@@ -41,6 +45,8 @@
 				MainFactory.getWord()
 					.then(function(word){
 						$scope.word = word.word;
+						$scope.unscrambled = '';
+						$scope.scrambled = '';
 						console.log("original word: " + $scope.word);
 						$scope.scramble($scope.word);
 					});

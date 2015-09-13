@@ -1,4 +1,40 @@
 body{
 	font-family: 'Roboto Condensed',sans-serif;
-	background-color: #dbdcff;
+	background-color: #c0dfd9;
+}
+
+h1{
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-size: 50px;
+}
+
+.container{
+	text-align: center;
+}
+
+.footer{
+	width: 100%;
+	position: fixed;
+	bottom: 20px;
+	text-align: center;
+	color: #b3c2bf;
+}
+
+.social-buttons a {
+	display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  font-size: 20px;
+  line-height: 35px;
+  color: #b3c2bf;
+  background-color: #fff;
+}
+
+.social-buttons a:hover,
+.social-buttons a:focus,
+.social-buttons a:active {
+  background-color: #e9ece5;
 }

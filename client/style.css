@@ -7,8 +7,8 @@ h1{
 	text-align: center;
 	color: white;
 	font-weight: bold;
-	font-size: 60px;
-	margin: 150px 0 20px 0;
+	font-size: 65px;
+	margin: 165px 0 10px 0;
 }
 
 
@@ -19,12 +19,13 @@ h1{
 .character{
 	display: inline-block;
 	padding: 10px;
-	font-size: 35px;
+	font-size: 60px;
 	color: #b3c2bf;
-	margin: 8px;
-	width: 40px;
-	height: 40px;
+	margin: 8px 6px;
+	width: 65px;
+	height: 65px;
 	border-radius: 10px;
+	font-weight: bolder;
 }
 
 .footer h2{
@@ -47,15 +48,30 @@ h1{
 
 .noMatch{
 	color: white;
-	background-color: #e62739 !important;
+	background-color: #e05038 !important;
 }
 
 .unscrambled{
 	background-color: #fff;
 }
 
+#score{
+	margin-right: 10px;
+}
+
+.scoringSystem{
+	margin-top: 8px;
+	color: #fff;
+	font-weight: bolder;
+	font-size: 20px;
+}
+
 .scrambled{
 	background-color: #e9ece5;
+}
+
+span{
+	margin: 0 10px;
 }
 
 .social-buttons a {

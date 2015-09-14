@@ -15,7 +15,8 @@
 			$scope.matched = false;
 			$scope.noMatch = false;
 			$scope.score = 0;
-			$scope.strike = 0;
+			$scope.streak = 0;
+			$scope.highScore = 0;
 
 			// On keypress, check if pressed character matches any character in the scrambled string
 			// If so, remove character from scrambled string and add it to the unscrambled string.
@@ -34,7 +35,10 @@
 		    				if(result.totalResults > 0 || $scope.unscrambled === $scope.word){
 		    					$scope.matched = true;
 		    					$scope.score += 100;
-		    					$scope.strike += 1;
+		    					$scope.streak += 1;
+		    					if($scope.score > $scope.highScore){
+		    						$scope.highScore = $scope.score;
+		    					}
 		    					$timeout(function(){
 		    						$scope.getWord()
 		    					}, 500);
@@ -42,7 +46,7 @@
 				    			$scope.noMatch = !$scope.noMatch;
 				    			$timeout(function(){
 				    				$scope.score = 0;
-				    				$scope.strike = 0;
+				    				$scope.streak = 0;
 					    			$scope.unscrambled = '';
 					    			$scope.scrambled = $scope.scrambledWord;
 					    			$scope.noMatch = !$scope.noMatch;
@@ -70,6 +74,7 @@
 			$scope.getWord = function(){
 				MainFactory.getWord()
 					.then(function(word){
+						console.log(word);
 						$scope.matched = false;
 						$scope.word = word.word;
 						$scope.unscrambled = '';

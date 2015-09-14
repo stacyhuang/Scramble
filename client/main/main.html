@@ -2,7 +2,13 @@
 <div class="container" keypress-events keydown-events>
 	<div class="character unscrambled" ng-class="{'matched': matched, 'noMatch': noMatch}" ng-repeat="character in unscrambled track by $index">{{ character }}</div>
 	<div class="character scrambled" ng-repeat="character in scrambled track by $index">{{ character }}</div>
-	<div class="scoringSystem"><span id="score">Score: {{ score }}</span><i class="fa fa-star"></i><span id="strike">Strike: {{ strike }}</span></div>
+	<div class="scoringSystem">
+		<span id="score">Score: {{ score }}</span>
+		<i class="fa fa-star"></i>
+		<span id="highScore">High Score: {{ highScore }}</span>
+		<i class="fa fa-star"></i>
+		<span id="strike">Streak: {{ streak }}</span>
+	</div>
 </div>
 <div class="footer">
 	<h2>Made with <i class="fa fa-heart"></i> by Stacy Huang</h2>

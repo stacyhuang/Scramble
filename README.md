@@ -1,6 +1,6 @@
 # Scramble
 
-Scramble is an online word scramble game. Unscramble the words and earn as many points as you can!
+Scramble is an online word scramble game. Rearrange the scrambled letters and form the right word to earn points. 
 
 [http://scramble-words.herokuapp.com](http://scramble-words.herokuapp.com)
 

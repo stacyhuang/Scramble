@@ -1,72 +1,72 @@
 body{
-	font-family: 'Roboto Condensed',sans-serif;
-	background-color: #c0dfd9;
+  font-family: 'Roboto Condensed',sans-serif;
+  background-color: #c0dfd9;
 }
 
 h1{
-	text-align: center;
-	color: white;
-	font-weight: bold;
-	font-size: 65px;
-	margin: 165px 0 10px 0;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 65px;
+  margin: 165px 0 10px 0;
 }
 
 .character{
-	display: inline-block;
-	padding: 10px;
-	font-size: 60px;
-	color: #b3c2bf;
-	margin: 8px 6px;
-	width: 65px;
-	height: 65px;
-	border-radius: 10px;
-	font-weight: bolder;
+  display: inline-block;
+  padding: 10px;
+  font-size: 60px;
+  color: #b3c2bf;
+  margin: 8px 6px;
+  width: 65px;
+  height: 65px;
+  border-radius: 10px;
+  font-weight: bolder;
 }
 
 .container{
-	text-align: center;
+  text-align: center;
 }
 
 .footer{
-	width: 100%;
-	position: fixed;
-	bottom: 30px;
-	text-align: center;
-	color: #b3c2bf;
+  width: 100%;
+  position: fixed;
+  bottom: 30px;
+  text-align: center;
+  color: #b3c2bf;
 }
 
 .footer h2{
-	margin: 10px;
-	font-size: 18px;
+  margin: 10px;
+  font-size: 18px;
 }
 
 .matched{
-	color: white;
-	background-color: #6ed3cf !important;
+  color: white;
+  background-color: #6ed3cf !important;
 }
 
 .noMatch{
-	color: white;
-	background-color: #e05038 !important;
+  color: white;
+  background-color: #e05038 !important;
 }
 
 #score{
-	margin-right: 10px;
+  margin-right: 10px;
 }
 
 .scoringSystem{
-	margin-top: 10px;
-	color: #fff;
-	font-weight: bolder;
-	font-size: 20px;
+  margin-top: 10px;
+  color: #fff;
+  font-weight: bolder;
+  font-size: 20px;
 }
 
 .scrambled{
-	background-color: #e9ece5;
+  background-color: #e9ece5;
 }
 
 .social-buttons a{
-	display: inline-block;
+  display: inline-block;
   width: 35px;
   height: 35px;
   border-radius: 100%;
@@ -83,9 +83,9 @@ h1{
 }
 
 span{
-	margin: 0 10px;
+  margin: 0 10px;
 }
 
 .unscrambled{
-	background-color: #fff;
+  background-color: #fff;
 }

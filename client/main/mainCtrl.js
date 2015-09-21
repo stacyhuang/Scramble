@@ -32,6 +32,19 @@
         });
       });
 
+      // On keydown, remove previous character from the unscrambled string,
+      // and add it back to the scrambled string at its previous index
+      $rootScope.$on('keydown', function (evt, obj, key) {
+        $scope.$apply(function () {
+          if($scope.indexStack.length > 0){
+            var prevIndex = $scope.indexStack.pop();
+            var prevChar = $scope.unscrambled[$scope.unscrambled.length - 1];
+            $scope.unscrambled = $scope.unscrambled.slice(0, $scope.unscrambled.length - 1);
+            $scope.scrambled = $scope.scrambled.slice(0, prevIndex) + prevChar + $scope.scrambled.slice(prevIndex);
+          }
+        });
+      });
+
       // Check if unscrambled string matches the original word or is an anagram. If so, call getWord() to get a new word
       $scope.checkWord = function(){
         if($scope.unscrambled.length === $scope.word.length){
@@ -61,19 +74,6 @@
         }
       };
 
-      // On keydown, remove previous character from the unscrambled string,
-      // and add it back to the scrambled string at its previous index
-      $rootScope.$on('keydown', function (evt, obj, key) {
-        $scope.$apply(function () {
-          if($scope.indexStack.length > 0){
-            var prevIndex = $scope.indexStack.pop();
-            var prevChar = $scope.unscrambled[$scope.unscrambled.length - 1];
-            $scope.unscrambled = $scope.unscrambled.slice(0, $scope.unscrambled.length - 1);
-            $scope.scrambled = $scope.scrambled.slice(0, prevIndex) + prevChar + $scope.scrambled.slice(prevIndex);
-          }
-        });
-      });
-
       // Gives a hint by adding the next correct character to the unscrambled string
       $scope.getHint = function(){
         var startIndex = 0;
@@ -102,7 +102,8 @@
             $scope.unscrambled = '';
             $scope.scrambled = '';
             $scope.indexStack = [];
-            $scope.scrambled = MainFactory.scramble($scope.word);
+            $scope.scrambledWord = MainFactory.scramble($scope.word);
+            $scope.scrambled = $scope.scrambledWord;
           });
       };
 

@@ -40,6 +40,18 @@ h1{
   font-size: 18px;
 }
 
+.hintBtn{
+  border: none;
+  border-radius: 5px;
+  background-color: #e9ece5;
+  color: #b3c2bf;
+  padding: 10px 15px;
+  font-weight: bold;
+  font-size: 15px;
+  margin: 10px;
+  cursor: pointer;
+}
+
 .matched{
   color: white;
   background-color: #6ed3cf !important;

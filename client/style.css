@@ -3,12 +3,16 @@ body{
   background-color: #c0dfd9;
 }
 
-h1{
-  text-align: center;
-  color: white;
+button{
+  border: none;
+  border-radius: 5px;
+  background-color: #e9ece5;
+  color: #b3c2bf;
+  padding: 10px 15px;
   font-weight: bold;
-  font-size: 65px;
-  margin: 165px 0 10px 0;
+  font-size: 15px;
+  margin: 10px 5px;
+  cursor: pointer;
 }
 
 .character{
@@ -27,6 +31,13 @@ h1{
   text-align: center;
 }
 
+.definition{
+  color: #b3c2bf;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 10px;
+}
+
 .footer{
   width: 100%;
   position: fixed;
@@ -40,16 +51,12 @@ h1{
   font-size: 18px;
 }
 
-.hintBtn{
-  border: none;
-  border-radius: 5px;
-  background-color: #e9ece5;
-  color: #b3c2bf;
-  padding: 10px 15px;
+h1{
+  text-align: center;
+  color: white;
   font-weight: bold;
-  font-size: 15px;
-  margin: 10px;
-  cursor: pointer;
+  font-size: 65px;
+  margin: 140px 0 10px 0;
 }
 
 .matched{
@@ -67,7 +74,7 @@ h1{
 }
 
 .scoringSystem{
-  margin-top: 10px;
+  margin: 10px;
   color: #fff;
   font-weight: bolder;
   font-size: 20px;

@@ -30,6 +30,16 @@
         })
       };
 
+      var getDefinition = function(word){
+        return $http({
+          method: 'GET',
+          url: 'http://api.wordnik.com:80/v4/word.json/' + word + '/definitions?limit=1&includeRelated=false&sourceDictionaries=all&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5'
+        })
+        .then(function(res){
+          return res.data[0].text;
+        })
+      }
+
       // Scramble the random word
       var scramble = function(str){
         var arr = str.split('')
@@ -45,6 +55,7 @@
       return {
         getWord: getWord,
         checkWord: checkWord,
+        getDefinition: getDefinition,
         scramble: scramble
       };
     }

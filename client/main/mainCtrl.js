@@ -17,6 +17,8 @@
       $scope.score = 0;
       $scope.streak = 0;
       $scope.highScore = 0;
+      $scope.definition = '';
+      $scope.showDefinition = false;
 
       // On keypress, check if pressed character matches any character in the scrambled string
       // If so, remove character from scrambled string and add it to the unscrambled string.
@@ -101,9 +103,18 @@
             $scope.word = word;
             $scope.unscrambled = '';
             $scope.scrambled = '';
+            $scope.showDefinition = '';
             $scope.indexStack = [];
             $scope.scrambledWord = MainFactory.scramble($scope.word);
             $scope.scrambled = $scope.scrambledWord;
+          });
+      };
+
+      $scope.getDefinition = function(){
+        MainFactory.getDefinition($scope.word)
+          .then(function(def){
+            $scope.definition = def;
+            $scope.showDefinition = !$scope.showDefinition
           });
       };
 

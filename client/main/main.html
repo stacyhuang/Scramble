@@ -9,7 +9,9 @@
     <i class="fa fa-star"></i>
     <span id="strike">Streak: {{ streak }}</span>
   </div>
-  <button class="hintBtn" ng-Click="getHint()">Hint</button>
+  <button class="hintBtn" ng-Click="getHint()">Hint: Next letter</button>
+  <button class="definitionBtn" ng-click="getDefinition()">Hint: Definition</button>
+  <div ng-show="showDefinition" class="definition"><i class="fa fa-quote-left"></i>  {{ definition }}</div>
 </div>
 <div class="footer">
   <h2>Made with <i class="fa fa-heart"></i> by Stacy Huang</h2>

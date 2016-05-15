@@ -4,17 +4,20 @@ Scramble is an online word scramble game. Rearrange the scrambled letters and fo
 
 [http://scramble-words.herokuapp.com](http://scramble-words.herokuapp.com)
 
-
-## Table of Contents
-
-1. [Installing Dependencies](#installing-dependencies)
-2. [Tech Stack](#tech-stack)
+![image](https://farm8.staticflickr.com/7313/26948808281_f4393f694e_b.jpg)
 
 ## Installing Dependencies
 
 ```
 npm install
 ```
+
+## Run
+
+```
+node server.js
+```
+Open http://localhost:8000 in the browser
 
 ## Tech Stack
  - AngularJS
